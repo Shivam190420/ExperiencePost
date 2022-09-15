@@ -9,6 +9,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<EmployeeDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("EmployeeDbContext")));
 builder.Services.AddTransient<IEmployeeRepo, Employee_Sql>();
+//builder.Services.AddTransient<IEmployeeRepo, InMemory>();
 
 var app = builder.Build();
 
