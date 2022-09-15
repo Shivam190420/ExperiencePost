@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Templayout.cshtml";
+}
+
+    <div class="row">
+
+        <div class="col-sm">
+            <h2>Register</h2>
+
+            <form action ="/ExperiencePost/Register" method="post">
+
+            <label class="form-group">First Name  : </label>
+            <input name="FirstName" type="text" class="form-control" />
+                <br /><br />
+
+
+            <label class="form-group">Last Name   : </label>
+            <input name="LastName" type="text" class="form-control" />
+                <br /><br />
+
+            <label class="form-group">Password  : </label>
+            <input name="Password" type="password" class="form-control" />
+                <br /><br />
+
+            <label class="form-group">CellNumber  : </label>
+            <input name="CellNumber" type="text" class="form-control" />
+                <br /><br />
+
+            <label class="form-group">Email  : </label>
+            <input name="Email" type="text" class="form-control" />
+                <br /><br />
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+
+            <!-- <input type="submit" value="Create" /> -->
+            <br /><br />
+
+            </form>
+        </div>
+
+        <div class="col-sm">
+
+            <div >
+            <img src="https://th.bing.com/th/id/OIP.GrIw9utDBo6KsvDojVxfRAHaDF?pid=ImgDet&rs=1" align="right" height="250" width="550">
+            </div>
+        </div>
+    </div>
+<script>
+        .login - btn {
+        padding: 20px;
+        color: black;
+        max - width: fit - content;
+    }
+
+    .login - tab {
+        align - items: flex - end;
+        margin - top: 0;
+        width: 10 %;
+        padding: 10px;
+        margin - right: 5px;
+    }
+
+    nav {
+        display: flex;
+        /* background: black; */
+        flex - direction: row;
+        align - content: space - around;
+        justify - content: flex - end;
+        align - items: center;
+    }
+
+    #main - page {
+        display: flex;
+        flex - direction: row;
+        justify - content: space - around;
+        align - items: center;
+    }
+
+    h2 {
+        padding: 10px;
+        margin - left: 12 %;
+    }
+</script>
+

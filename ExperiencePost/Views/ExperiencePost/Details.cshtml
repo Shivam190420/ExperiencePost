@@ -1,0 +1,58 @@
+﻿@model Employee
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div class="container" style=" width:400px; border:1px solid black; padding:20px; margin:10px; border-radius:10px">
+    @foreach (Employee emp in ViewBag.Employee)
+    {
+        <h6>@emp.FirstName </h6>
+         <br />
+
+        @emp.LastName
+
+        <br />
+
+        @emp.CellNumber
+
+        <br />
+
+        @emp.Email
+
+        <br />
+
+        <div>
+            <a asp-action="AddSkill" asp-route-id="@ViewBag.Employee[0].EmpID">Add Skill</a> |
+            <a asp-action="Edit" asp-route-id="@ViewBag.Employee[0].EmpID">Edit</a>          
+        </div>
+       
+    }
+</div>
+
+<br />
+<hr />
+<hr />
+<table class="table" style="text-align:center">
+    <tr>
+        <th>Skill Name</th>
+        <th>Role</th>
+        <th>Experience In Years</th>
+    </tr>
+    @foreach (Skill emp in ViewBag.Skills)
+    {
+        
+        <tr>
+
+            <form asp-action="DeleteSkill" method ="Post">
+                <input type="hidden" value="@emp.SkillId" name="Skillid">
+                <td>@emp.SkillName </td>
+                <td>@emp.Role</td>
+                <td>@emp.ExperienceInYears</td>
+                <td> <button type = "submit" >Delete</button></td>
+            </form>
+        </tr>
+    }
+</table>
